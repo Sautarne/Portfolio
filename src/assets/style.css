@@ -19,16 +19,20 @@ body{
 /* <================ HEADER ================> */
 
 header{
-    width: 300%;
-    background-color: #0D0126;
+    width: 200%;
     box-shadow: 0px 19px 50px -40px white;
     display: flex;
     justify-content: center;
-    position : fixed
-}
+    position : fixed;
+    background-image: url(../../Images/ligne-perspective.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50% 100%;
+}   
 .navigation{
     height: 150px;
-    width: 60em;
+    width: 50%;
+    max-width: 60em;
     display: flex;
     align-items: center;
 }
@@ -38,13 +42,13 @@ header{
     cursor: pointer;
 }
 .open-nav{
-    width: 2em;
-    height: 2em;
+    width: 3em;
+    height: 3em;
     display: none;
 }
 .close-nav{
-    width: 2em;
-    height: 2em;
+    width: 3em;
+    height: 3em;
     display: none;
 }
 nav{
@@ -54,7 +58,7 @@ nav{
     align-items: center;
     justify-content: space-evenly;
 }
-ol{
+.menu{
     list-style: none;
     display: flex;
     width: 100%;
@@ -69,7 +73,7 @@ li{
     padding: 0.3em;
 }
 li:hover{
-    text-shadow: 0 0 0.5em currentColor;
+    text-shadow: 0 0 1em var(--color-shadow);
     box-shadow: inset 0px 0px 10px 1px var(--color-shadow),
     0px 0px 20px 1px var(--color-shadow);
 }
@@ -78,7 +82,41 @@ a{
     color: var(--color-main);
 }
 
+/*responsive du nav pour téléphone*/
+
 @media all and (max-width: 1000px) {
+/*gestion des boutons*/
+    .toggle{
+        display: block;
+        cursor: pointer;
+    }
+    .open-nav{
+        display: block;
+    }
+    .close-nav{
+        display: none;
+    }
+    .open .open-nav{
+        display: none;
+    }
+    .open .close-nav{
+        display: block;
+    }
+/*gestion du menu*/
+    .menu {
+        display: none;
+    }
+    .open .menu{
+        position: absolute;
+        background-color: var(--color-shadow);
+        width: 10em;
+        height: 15em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 0;
+        margin: 0;
+    }
 
 }
 
