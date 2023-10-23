@@ -41,16 +41,6 @@ header{
     height: 5em;
     cursor: pointer;
 }
-.open-nav{
-    width: 3em;
-    height: 3em;
-    display: none;
-}
-.close-nav{
-    width: 3em;
-    height: 3em;
-    display: none;
-}
 nav{
     width: 100%;
     height: 100%;
@@ -80,44 +70,6 @@ li:hover{
 a{
     text-decoration: none;
     color: var(--color-main);
-}
-
-/*responsive du nav pour téléphone*/
-
-@media all and (max-width: 1000px) {
-/*gestion des boutons*/
-    .toggle{
-        display: block;
-        cursor: pointer;
-    }
-    .open-nav{
-        display: block;
-    }
-    .close-nav{
-        display: none;
-    }
-    .open .open-nav{
-        display: none;
-    }
-    .open .close-nav{
-        display: block;
-    }
-/*gestion du menu*/
-    .menu {
-        display: none;
-    }
-    .open .menu{
-        position: absolute;
-        background-color: var(--color-shadow);
-        width: 10em;
-        height: 15em;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        padding: 0;
-        margin: 0;
-    }
-
 }
 
 /* <================ MAIN ================> */
