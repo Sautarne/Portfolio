@@ -4,6 +4,7 @@
 
 :root{
     --police-neon: 'Tilt Neon', sans serif;
+    --police-Noto: 'Noto sans', sans serif;
     --color-main: #E1C4FF;
     --color-shadow: #8C1EFF; 
 }
@@ -73,3 +74,33 @@ a{
 }
 
 /* <================ MAIN ================> */
+/* <=============== ACCUEIL ==============> */
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.accueil{
+    max-width: 60em;
+    height: 1080px;
+    margin-top: 150px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-family: var(--police-Noto);
+}
+.accueil p{
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: var(--police-Noto);
+    line-height: 1.5em;
+    text-align: center;
+}
