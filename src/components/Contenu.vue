@@ -1,12 +1,10 @@
 <template>
 
-    <div class="container">
+    <div id="container" :class="cssClass">
 
-    <p>Une modale en Vue JS</p>
+        <modale :revele='revele' :toggleModale='toggleModale' :imageSrc="imageSrc"></modale>
 
-    <modale v-bind:revele='revele' v-bind:toggleModale='toggleModale'></modale>
-    <img class="mon-cv" src="../../Images/Mon_CV.PNG" alt="test" v-on:click='toggleModale'>
-
+        <img :src="imageSrc" alt="" v-on:click='toggleModale'>
     </div>
 
 </template>
@@ -18,6 +16,7 @@
 
     export default {
         name: 'Contenu',
+        props: ['imageSrc', 'backgroundColor'],
         data(){
             return{
                 revele: false
@@ -30,25 +29,38 @@
             toggleModale: function(){
                 this.revele = !this.revele
             }
+        },
+        computed: {
+            cssClass() {
+                return this.backgroundColor === 'orange' ? 'orange-background' : 'rose-background';
+            }
         }
     }
 
 </script>
 
 
-<style>
+<style scoped>
 
-.container{
+#container{
+    height: 700px;
+    display: flex;
+    align-items: center;
+}
+
+.orange-background{
     background: -webkit-linear-gradient(300deg, #ff2975,#ff901f);
     background: linear-gradient(300deg, #ff2975,#ff901f);
 }
 
-.container p{
-    color: aqua;
+.rose-background{
+    background: -webkit-linear-gradient(300deg, #f222ff,#ff2975);
+    background: linear-gradient(300deg, #f222ff,#ff2975);
 }
 
-.mon-cv{
-    height: 100%;
-    width: 500px;
+img{
+    height: 601px;
+    width: 517px;
+    padding-left: 50px;
 }
 </style>

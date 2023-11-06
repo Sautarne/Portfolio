@@ -1,12 +1,11 @@
 <template>
 
-<div class="bloc-modale" v-if='revele'>
+<div id="bloc-modale" class="" v-if='revele'>
 
     <div class="overlay" v-on:click="toggleModale"></div>
     <div class="modale">
         <button class="btn-modale" v-on:click="toggleModale">X</button>
-        <p>Le contenu de la modale</p>
-        <img class="mon-cv-modale" src="../../Images/Mon_CV.PNG" alt="test">
+        <img class="mon-cv-modale" :src="imageSrc" alt="">
 
     </div>
 
@@ -19,7 +18,7 @@
 
 export default {
     name: 'modale',
-    props: ['revele', 'toggleModale']
+    props: ['revele', 'toggleModale', 'imageSrc']
 }
 
 </script>
@@ -27,7 +26,7 @@ export default {
 
 <style scoped>
 
-.bloc-modale {
+#bloc-modale {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -46,25 +45,21 @@ export default {
     left: 0;
     right: 0;
 }
-
 .modale{
     background: #f1f1f1;
     color: #333;
     padding: 50px;
     position: fixed;
-    top: 10%;
-    bottom: 10%;
+    background: -webkit-linear-gradient(300deg, #ff2975,#ff901f);
+    background: linear-gradient(300deg, #ff2975,#ff901f);
+    /* background: -webkit-linear-gradient(300deg, #f222ff,#ff2975);
+    background: linear-gradient(300deg, #f222ff,#ff2975); */
 }
-
 .btn-modale{
     position: absolute;
     top: 10px;
     right: 10px;
 }
-.bloc-modale p{
-    color: red;
-}
-
 .mon-cv-modale{
     height: 100%;
     width: 600px;
