@@ -5,7 +5,7 @@
     <p>Une modale en Vue JS</p>
 
     <modale v-bind:revele='revele' v-bind:toggleModale='toggleModale'></modale>
-    <button class="btn-toggle" v-on:click='toggleModale' >Ouvre la modale</button>
+    <img class="mon-cv" src="../../Images/Mon_CV.PNG" alt="test" v-on:click='toggleModale'>
 
     </div>
 
@@ -37,7 +37,18 @@
 
 
 <style>
+
+.container{
+    background: -webkit-linear-gradient(300deg, #ff2975,#ff901f);
+    background: linear-gradient(300deg, #ff2975,#ff901f);
+}
+
 .container p{
     color: aqua;
+}
+
+.mon-cv{
+    height: 100%;
+    width: 500px;
 }
 </style>

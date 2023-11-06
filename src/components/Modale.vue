@@ -6,6 +6,7 @@
     <div class="modale">
         <button class="btn-modale" v-on:click="toggleModale">X</button>
         <p>Le contenu de la modale</p>
+        <img class="mon-cv-modale" src="../../Images/Mon_CV.PNG" alt="test">
 
     </div>
 
@@ -51,7 +52,8 @@ export default {
     color: #333;
     padding: 50px;
     position: fixed;
-    top: 30%;
+    top: 10%;
+    bottom: 10%;
 }
 
 .btn-modale{
@@ -61,6 +63,11 @@ export default {
 }
 .bloc-modale p{
     color: red;
+}
+
+.mon-cv-modale{
+    height: 100%;
+    width: 600px;
 }
 
 </style>
