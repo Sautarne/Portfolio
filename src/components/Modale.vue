@@ -36,7 +36,6 @@ export default {
     justify-content: center;
     align-items: center;
 }
-
 .overlay{
     background: rgba(0,0,0,0.5);
     position: fixed;
