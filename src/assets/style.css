@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Tilt+Neon&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Press+Start+2P&family=Tilt+Neon&display=swap');
 
 :root{
     --police-neon: 'Tilt Neon', sans serif;
     --police-Noto: 'Noto sans', sans serif;
+    --police-pixel: 'Press Start 2P', sans serif;
     --color-main: #E1C4FF;
     --color-shadow: #8C1EFF; 
 }

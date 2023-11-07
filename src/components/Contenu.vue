@@ -4,9 +4,12 @@
         <div class="contenu-modale">
             <modale :revele='revele' :toggleModale='toggleModale' :imageSrc="imageSrc"></modale>
             <img :src="imageSrc" alt="" v-on:click='toggleModale'>
-            <p>TEST</p>
-            <p>TEST</p>
-            <p>TEST</p>
+            <p>{{ titreModale }}</p>
+            <p>{{ langageUsed }}</p>
+            <div>
+                <a :href="projectLink" target="_blank">&lt;code&gt;</a>
+            </div>
+
         </div>
 
     </div>
@@ -20,7 +23,7 @@
 
     export default {
         name: 'Contenu',
-        props: ['imageSrc', 'backgroundColor'],
+        props: ['imageSrc', 'backgroundColor', 'titreModale', 'langageUsed', 'projectLink'],
         data(){
             return{
                 revele: false
@@ -55,24 +58,41 @@
     justify-content: center;
 }
 .contenu-modale{
-    width: 1160px;
-    display: flex;
-    flex-direction: row;
+    width: 1300px;
+    padding-left: 50px;
+    display: grid;
+    grid-template-columns: 540px 760px;
+    grid-auto-rows: minmax(3, auto);
+    font-size: 2.5em;
+    font-family: var(--police-pixel);
+    letter-spacing: 2px;
+    line-height: 1.5em;
 }
-.contenu-modale p{
+.contenu-modale p, .contenu-modale div{
     padding-left: 100px;
+    text-decoration: none;
+
+    display: inline-block;
+}
+a {
+    text-decoration: none;
+    color: white;
 }
 .orange-background{
     background: -webkit-linear-gradient(300deg, #ff2975,#ff901f);
     background: linear-gradient(300deg, #ff2975,#ff901f);
 }
 .rose-background{
-    background: -webkit-linear-gradient(300deg, #f222ff,#ff2975);
-    background: linear-gradient(300deg, #f222ff,#ff2975);
+    background: -webkit-linear-gradient(300deg, #8C1EFF,#0D0126);
+    background: linear-gradient(300deg, #8C1EFF,#0D0126);
 }
 img{
     height: 601px;
     width: 517px;
-    padding-left: 50px;
+    grid-column: 1;
+    grid-row: 1 / 4;
+}
+img:hover{
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.3);
 }
 </style>
