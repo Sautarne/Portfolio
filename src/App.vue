@@ -1,30 +1,28 @@
-<!--
-Mettre en place le texte dans le composants Contenu
-Faire en sorte qu'on définisse le texte dans App.vue pour permettre d'avoir un texte personnalisé sur chaque contenu
-(faire suremenet une liste comme les sources d'images)
--->
-
 <template>
+
   <div id="app">
     <contenu
     name="mon_cv"
-    :imageSrc="imagePaths[0]"
     backgroundColor="orange"
+    :imageSrc="imagePaths[0]"
     :titreModale="titreModale[0]"
     :langageUsed="langageUsed[0]"
-    :projectLink="projectLink[0]">
+    :projectLink="projectLink[0]"
+    :modaleDescription="modaleDescription[0]"
+    :creationDate="creationDate[0]">
     </contenu>
 
     <contenu
     name="espace_commentaire"
-    :imageSrc="imagePaths[1]"
     backgroundColor="rose"
+    :imageSrc="imagePaths[1]"
     :titreModale="titreModale[1]"
     :langageUsed="langageUsed[1]"
-    :projectLink="projectLink[1]">
+    :projectLink="projectLink[1]"
+    :modaleDescription="modaleDescription[1]"
+    :creationDate="creationDate[1]">
     </contenu>
   </div>
-
 
 </template>
 
@@ -55,7 +53,15 @@ export default {
       projectLink: [
         "https://github.com/Sautarne/Mon_CV",
         "https://github.com/Sautarne/Espace-commentaire",
-      ]
+      ],
+      modaleDescription: [
+        "Voici mon CV créé entièrement avec du HTML et CSS",
+        "Voici un exemple d'espace commentaire que j'ai réalisé en HTML / CSS et JS"
+      ],
+      creationDate: [
+        "30/08/2023",
+        "17/10/2023",
+      ],
     }
   }
 }
