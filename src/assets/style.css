@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Tilt+Neon&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Press+Start+2P&family=Tilt+Neon&display=swap');
+
 
 :root{
     --police-neon: 'Tilt Neon', sans serif;
-    --police-Noto: 'Noto sans', sans serif;
-    --police-pixel: 'Press Start 2P', sans serif;
     --color-main: #E1C4FF;
     --color-shadow: #8C1EFF; 
 }
@@ -27,7 +25,6 @@ header{
     justify-content: center;
     position : fixed;
     background-image: url(../../Images/ligne-perspective.png);
-    background-color: #0D0126;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 50% 100%;
@@ -59,13 +56,13 @@ nav{
     display: flex;
     justify-content: space-around;
 }
-nav li{
+li{
     font-family: var(--police-neon);
     border: 0.1em solid var(--color-main);
     border-radius: 0.5em;
     padding: 0.3em;
 }
-nav li:hover{
+li:hover{
     text-shadow: 0 0 1em var(--color-shadow);
     box-shadow: inset 0px 0px 10px 1px var(--color-shadow),
     0px 0px 20px 1px var(--color-shadow);
@@ -76,75 +73,3 @@ a{
 }
 
 /* <================ MAIN ================> */
-/* <=============== ACCUEIL ==============> */
-main{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.accueil{
-    width: 100%;
-    height: 100%;
-    margin-top: 150px;
-    padding-bottom: 1.5em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-image: url(../../Images/synthwave-wallpaper.png);
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
-}
-h1, h2{
-    color: var(--color-main);
-    display: flex;
-    justify-content: center;
-    font-family: var(--police-neon);
-    font-size: 2.5em;
-    border: 0.1em solid var(--color-main);
-    border-radius: 0.5em;
-    padding: 0.2em;
-    text-shadow: 0 0 1em var(--color-shadow);
-    box-shadow: inset 0px 0px 10px 5px var(--color-shadow),
-    0px 0px 30px 10px var(--color-shadow);
-}
-.accueil p{
-    max-width: 60em;
-    color: white;
-    display: flex;
-    flex-wrap: wrap;
-    font-family: var(--police-Noto);
-    line-height: 1.5em;
-    font-size: 1.3em;
-    text-align: center;
-}
-.compétences{
-    color: white;
-    font-family: var(--police-Noto);
-}
-.compétences ol{
-    max-width: 60em;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    font-size: 1.5em;
-    line-height: 2em;
-}
-.compétences li{
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-}
-.compétences-list img{
-    height: 100px;
-    width: 100px;
-}
-
-/* <=============== MODALE ==============> */
-
-
-
-/* <=============== FOOTER ==============> */
