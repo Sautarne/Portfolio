@@ -12,12 +12,11 @@
                 :modaleDescription="modaleDescription"
                 :creationDate="creationDate">
             </modale>
-
             <img :src="imageSrc" alt="" v-on:click='toggleModale'>
             <p>{{ titreModale }}</p>
             <p>{{ langageUsed }}</p>
-            <div>
-                <a :href="projectLink" target="_blank">&lt;code&gt;</a>
+            <div  class="project-link">
+                <a :href="projectLink" target="_blank" :class="btnClass">&lt;code&gt;</a>
             </div>
             
         </div>
@@ -55,10 +54,14 @@
                 this.revele = !this.revele
             }
         },
-        /*Permet le changement de fond sur les différents contenus*/
         computed: {
+            /*Permet le changement de fond sur les différents contenus*/
             cssClass() {
                 return this.backgroundColor === 'orange' ? 'orange-background' : 'rose-background';
+            },
+            /*Permet le changement de fond des boutons*/
+            btnClass() {
+                return this.backgroundColor === 'orange' ?'rose-background' : 'orange-background' ;
             }
         }
     }
@@ -69,6 +72,7 @@
 <style scoped>
 
 #container{
+    color: white;
     height: 700px;
     display: flex;
     align-items: center;
@@ -81,17 +85,19 @@
     grid-template-columns: 540px 760px;
     grid-auto-rows: minmax(3, auto);
     font-size: 2.5em;
-    font-family: var(--police-pixel);
+    font-family: var(--police-neon);
     letter-spacing: 2px;
     line-height: 1.5em;
 }
-.contenu-modale p, .contenu-modale div{
+.contenu-modale p, .project-link{
     padding-left: 100px;
-    text-decoration: none;
 }
 a {
     text-decoration: none;
     color: white;
+    padding: 0px 5px 4px 5px;
+    border: solid white;
+    border-radius:30px;
 }
 .orange-background{
     background: -webkit-linear-gradient(300deg, #ff2975,#ff901f);
@@ -104,6 +110,7 @@ a {
 img{
     height: 601px;
     width: 517px;
+    border-radius: 20px;
     grid-column: 1;
     grid-row: 1 / 4;
 }

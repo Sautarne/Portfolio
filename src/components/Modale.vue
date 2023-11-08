@@ -9,7 +9,7 @@
         <p>{{ modaleDescription }}</p>
         <p>Date de création: {{ creationDate }}</p>
         <div>
-            <a :href="projectLink" target="_blank">&lt;code&gt;</a>
+            <a :href="projectLink" target="_blank" :class="btnClass">&lt;code&gt;</a>
         </div>
 
     </div>
@@ -50,6 +50,7 @@ export default {
 <style scoped>
 
 #bloc-modale {
+    color: white;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -73,8 +74,11 @@ export default {
     display: grid;
     grid-template-columns: 600px 700px;
     grid-auto-rows: minmax(3, auto);
+    font-family: var(--police-Noto);
+    border-radius: 20px;
 }
 .btn-modale{
+    color: white;
     position: absolute;
     top: 15px;
     right: 15px;
@@ -84,17 +88,21 @@ export default {
     border: none;
 }  
 a{
-    text-decoration: none;
     color: white;
-}
-.modale a, .modale p{
-    padding-left: 100px;
+    font-size: 1.2em;
     text-decoration: none;
+    padding: 0px 5px 4px 5px;
+    border: solid white;
+    border-radius:20px;
+}
+.modale div, .modale p{
+    padding-left: 100px;
     font-size: 0.6em;
 }
 img{
     grid-column: 1;
     grid-row: 1 / 4;
+    border-radius: 20px;
 }
 .mon-cv-modale{
     height: 100%;
