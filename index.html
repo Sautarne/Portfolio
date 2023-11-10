@@ -43,17 +43,19 @@
       <div id="app"></div>
 
       <div class="contact">
-        <form action="" method="get" class="contact-form">
-          <div class="form-example">
-            <label for="name">Enter your name: </label>
-            <input type="text" name="name" id="name" required />
+        <h2>CONTACT</h2>
+        <form action="#" method="get" class="contact-form">
+          <div class="lastname--firstname">
+            <input type="text" id="lastname--firstname" placeholder="Nom et prénom" required >
           </div>
-          <div class="form-example">
-            <label for="email">Enter your email: </label>
-            <input type="email" name="email" id="email" required />
+          <div class="object">
+            <input type="text" id="object" placeholder="Objet" required >
           </div>
-          <div class="form-example">
-            <input type="submit" value="Envoyer" />
+          <div class="message">
+            <textarea id="message" cols="30" rows="10" placeholder="Message" required></textarea>
+          </div>
+          <div class="form-button">
+            <input type="submit" value="Envoyer" id="form-button">
           </div>
         </form>
       </div>
