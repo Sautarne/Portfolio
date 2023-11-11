@@ -105,9 +105,9 @@ h1, h2{
     border: 0.1em solid var(--color-main);
     border-radius: 0.5em;
     padding: 0.2em;
-    text-shadow: 0 0 1em var(--color-shadow);
+    /* text-shadow: 0 0 1em var(--color-shadow);
     box-shadow: inset 0px 0px 10px 5px var(--color-shadow),
-    0px 0px 30px 10px var(--color-shadow);
+    0px 0px 30px 10px var(--color-shadow); */
 }
 .accueil p{
     max-width: 60em;
@@ -146,18 +146,26 @@ h1, h2{
 /* <=============== CONTACT ==============> */
 
 .contact{
-    height: 500px;
-}
-.contact{
-    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 50px;
+    padding-top: 30px;
     font-family: var(--police-Noto);
+    background: -webkit-linear-gradient(300deg, #9e1947,#ac6115);
+    background: linear-gradient(300deg, #9e1947,#ac6115);
 }
-.success-message{
-    font-size: 1.2em;
+.contact h2{
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-family: var(--police-neon);
+    font-size: 2.5em;
+    border: 0.1em solid white;
+    border-radius: 0.5em;
+    padding: 0.2em;
+    text-shadow: 0 0 1em #adadad;
+    box-shadow: inset 0px 0px 10px 5px #adadad,
+    0px 0px 30px 10px #adadad;
 }
 .contact-form{
     width: 900px;
@@ -175,8 +183,9 @@ h1, h2{
     margin: 15px 0px 15px 0px;
     padding-left: 12px;
     padding-right: 12px;
-    background-color: var(--color-main);
+    background-color: #f1f1f1;
     border-radius: 15px;
+    border: solid 1px black;
 }
 #lastname--firstname{
     width: 100%;
@@ -216,16 +225,43 @@ h1, h2{
     width: 200px;
     height: 30px;
     border-radius: 20px;
-    background: -webkit-linear-gradient(300deg, #8C1EFF,#260a61);
-    background: linear-gradient(300deg, #8C1EFF,#260a61);
-    border: none;
+    background: -webkit-linear-gradient(300deg, #9e1947,#ac6115);
+    background: linear-gradient(300deg, #9e1947,#ac6115);
+    border: solid 1px white;
 }
 .form-button{
     grid-column: 1/3 ;
-    margin: 10px 0 40px 0;
+    margin: 10px 0 10px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.success-message{
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
 
 /* <=============== FOOTER ==============> */
+
+footer{
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    background: -webkit-linear-gradient(300deg, #521296,#1a0a3f);
+    background: linear-gradient(300deg, #521296,#1a0a3f);
+    color: white;
+    font-family: var(--police-Noto);
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer img{
+    width: 40px;
+    height: 40px;
+    margin: 30px 10px 10px 10px;
+}
+footer p{
+    margin-bottom: 25px;
+}
