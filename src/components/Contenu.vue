@@ -61,7 +61,7 @@
             },
             /*Permet le changement de fond des boutons*/
             btnClass() {
-                return this.backgroundColor === 'orange' ?'rose-background' : 'orange-background' ;
+                return this.backgroundColor === 'orange' ? 'orange-background' : 'rose-background' ;
             }
         }
     }
