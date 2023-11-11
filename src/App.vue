@@ -55,8 +55,8 @@ export default {
         "https://github.com/Sautarne/Espace-commentaire",
       ],
       modaleDescription: [
-        "Voici mon CV créé entièrement avec du HTML et CSS",
-        "Voici un exemple d'espace commentaire que j'ai réalisé en HTML / CSS et JS"
+        "Voici mon CV créé entièrement avec du HTML et CSS. Il permet de montrer mes anciennes expériences ainsi que mes formations. Vous pourrez y retrouver également mes compétences",
+        "Voici un exemple d'espace commentaire que j'ai réalisé en HTML / CSS et JS. Il permet de remplir un message, avec son nom et prénom, et de le rajouter dans la liste au dessus"
       ],
       creationDate: [
         "30/08/2023",

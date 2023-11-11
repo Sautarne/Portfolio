@@ -42,9 +42,31 @@
       
       <div id="app"></div>
 
+      <div class="contact">
+        <h2>CONTACT</h2>
+        <div class="success-message">
+          
+        </div>
+        <form action="#" method="get" class="contact-form">
+          <div class="lastname--firstname">
+            <input type="text" id="lastname--firstname" placeholder="Nom et prénom" required >
+          </div>
+          <div class="object">
+            <input type="text" id="object" placeholder="Objet" required >
+          </div>
+          <div class="message">
+            <textarea id="message" cols="30" rows="10" placeholder="Message" required></textarea>
+          </div>
+          <div class="form-button">
+            <input type="submit" value="Envoyer" id="form-button">
+          </div>
+        </form>
+      </div>
     </main>
     <footer>
+
     </footer>
+    <script type="module" src="./src/app.js"></script>
     <script type="module" src="./src/main.js"></script>
   </body>
 </html>
