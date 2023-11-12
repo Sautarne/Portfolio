@@ -95,6 +95,7 @@
     background: -webkit-linear-gradient(300deg, #9e1947,#ac6115);
     background: linear-gradient(300deg, #9e1947,#ac6115);
     border: solid 1px white;
+    cursor: pointer;
 }
 .form-button{
     grid-column: 1/3 ;
