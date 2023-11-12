@@ -20,7 +20,9 @@ clic &lt;code&gt; -> download ZIP
 
 Extract the downloaded ZIP on your documents
 
-Launch CMD and follow below instruction
+Launch CMD -> cd "path to portfolio"
+
+follow the instructions below
 
 ## Project Setup
 
@@ -32,10 +34,4 @@ npm install
 
 ```sh
 npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
 ```
