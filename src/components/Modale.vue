@@ -10,6 +10,7 @@
         <p>Date de création: {{ creationDate }}</p>
         <div>
             <a :href="projectLink" target="_blank" :class="btnClass">&lt;code&gt;</a>
+            <a :href="siteLink" href="../../projects/Mon_CV-main/index.html" target="_blank" :class="btnClass">site</a>
         </div>
 
     </div>
@@ -31,6 +32,7 @@ export default {
         'backgroundColor',
         'modaleDescription',
         'creationDate',
+        'siteLink',
         ],
     computed: {
             /*Permet le changement de fond sur les différents contenus*/
@@ -91,9 +93,10 @@ a{
     color: white;
     font-size: 1.2em;
     text-decoration: none;
-    padding: 0px 5px 4px 5px;
+    padding: 0px 5px 4px 8px;
+    margin: 0 50px 0 0;
     border: solid white;
-    border-radius:20px;
+    border-radius:30px;
 }
 .modale div, .modale p{
     padding-left: 100px;

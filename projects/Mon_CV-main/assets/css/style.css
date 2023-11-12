@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@font-face {
+    font-family: "Raleway-italic";
+    src: url(../fonts/Raleway-Italic-VariableFont_wght.woff);
+    src: url(../fonts/Raleway-Italic-VariableFont_wght.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url(../fonts/Raleway-VariableFont_wght.woff);
+    src: url(../fonts/Raleway-VariableFont_wght.ttf) format("truetype");
+}
+
+/* Mise en place des variable de couleur et pour la taille des textes */
+:root {
+    --background-color: #782221;
+    --background-title-color: #dbc2a4;
+    --background-address-color: #2c1d27;
+    --font-size-text: 0.9em;
+    --font-size-h2: 1.2em;
+}
+
+body {
+    width: 1160px;
+    height: auto;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+header {
+    background-color: var(--background-color);
+    color: white;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.portrait {
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.portrait__picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 0px white;
+}
+
+.portrait__picture:hover {
+    cursor: zoom-in;
+}
+
+.name {
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-family: "lato", serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+h1 {
+    margin-top: 25px;
+    font-family: "lato", serif;
+    font-size: 1.2em;
+}
+
+/* Création de la grille pour séparer la partie about_me et resume */
+main {
+    min-height: 900px;
+    display: grid;
+    grid-template: 80px / repeat(10, 10%);
+}
+
+/* Début partie pour les informations personnelles */
+address {
+    grid-column: 1 / 11;
+    background-color: var(--background-address-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    font-family: "Raleway";
+    font-size: 0.9em;
+}
+
+address a:link {
+    color: white;
+    text-decoration: none;
+}
+
+address a:visited {
+    color: white;
+}
+
+address a:hover {
+    text-decoration: underline;
+}
+
+.mail {
+    margin: 0 20% 0 20%;
+}
+/* Fin de la partie pour les informations personnelles */
+
+/* Début de la partie pour faire une courte présentation de moi */
+.about_me {
+    grid-column: 1 / 4;
+    background-color: var(--background-color);
+}
+
+.about_me h2 {
+    background-color: var(--background-title-color);
+    box-sizing: border-box;
+    width: 91%;
+    font-family: "lato", serif;
+    font-size: var(--font-size-h2);
+    line-height: 1.5;
+    padding-left: 20px;
+}
+
+.about_me__about {
+    margin-right: 30px;
+    margin-bottom: 10%;
+}
+
+.about_me__about_text {
+    color: white;
+    box-sizing: border-box;
+    width: 91%;
+    font-family: "raleway";
+    font-size: var(--font-size-text);
+    text-align: justify;
+    text-indent: 25px;
+    line-height: 1.2;
+    padding-left: 20px;
+    margin-right: auto;
+}
+
+.about_me__spoken_languages {
+    margin-right: 30px;
+    margin-bottom: 10%;
+}
+
+.about_me__spoken_languages__list {
+    color: white;
+    font-family: "raleway";
+    font-size: var(--font-size-text);
+    line-height: 1.5;
+}
+
+.about_me__center_of_interest {
+    margin-right: 30px;
+    margin-bottom: 10%;
+}
+
+.about_me__center_of_interest__list {
+    color: white;
+    font-family: "raleway";
+    font-size: var(--font-size-text);
+    line-height: 1.5;
+}
+/* Fin de la partie pour faire une courte présentation de moi */
+
+/* Début de la partie pour avoir mon parcours professionnel, scolaire et mes compétences */
+.resume {
+    grid-column: 4 / 11;
+    box-sizing: border-box;
+    border-right: 2px solid black;
+    margin-left: 30px;
+}
+
+.resume h2 {
+    background-color: var(--background-title-color);
+    box-sizing: border-box;
+    height: 30px;
+    width: 97%;
+    font-family: "lato", serif;
+    font-size: var(--font-size-h2);
+    line-height: 1.7;
+    padding-left: 8px;
+    border-left: 7px solid;
+    border-color: var(--background-color);
+}
+
+.resume__professional_experiences__first_experience {
+    box-sizing: border-box;
+    width: 97%;
+    font-family: "Raleway", serif;
+    font-size: var(--font-size-text);
+    margin-bottom: 7%;
+}
+
+.resume__professional_experiences__first_experience:hover {
+    border-right: 7px solid;
+    border-color: var(--background-color);
+}
+
+.resume__professional_experiences__first_experience__list {
+    line-height: 1.5;
+}
+
+.resume__professional_experiences__second_experience {
+    box-sizing: border-box;
+    width: 97%;
+    font-family: "Raleway", serif;
+    font-size: var(--font-size-text);
+    margin-bottom: 7%;
+}
+
+.resume__professional_experiences__second_experience:hover {
+    border-right: 7px solid;
+    border-color: var(--background-color);
+}
+
+.resume__professional_experiences__second_experience__list {
+    line-height: 1.5;
+}
+
+.resume__diplomas__first_diplomas {
+    box-sizing: border-box;
+    width: 97%;
+    font-family: "Raleway", serif;
+    font-size: var(--font-size-text);
+    margin-bottom: 7%;
+}
+
+.resume__diplomas__first_diplomas:hover {
+    border-right: 7px solid;
+    border-color: var(--background-color);
+}
+
+.resume__skill__list {
+    box-sizing: border-box;
+    width: 97%;
+    font-family: "Raleway", serif;
+    font-size: var(--font-size-text);
+    margin-bottom: 7%;
+    line-height: 1.5;
+}
+
+.resume__skill__list:hover {
+    border-right: 7px solid;
+    border-color: var(--background-color);
+}
+/* Fin de la partie pour avoir mon parcours professionnel, scolaire et mes compétences */
+
+/* Debut de la partie pour les réseaux sociaux utiles */
+footer {
+    background-color: var(--background-color);
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__social {
+    box-sizing: border-box;
+    height: 40px;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__social__github {
+    max-height: 40px;
+    max-width: 40px;
+}
+
+.footer__social__github__picture {
+    height: 100%;
+    width: 100%;
+}
+
+.footer__social__github__picture:hover {
+    filter: opacity(80%);
+}
+
+.footer__social__linkedin {
+    max-height: 40px;
+    max-width: 40px;
+}
+
+.footer__social__linkedin__picture {
+    height: 100%;
+    width: 100%;
+}
+
+.footer__social__linkedin__picture:hover {
+    filter: opacity(80%);
+}
+
+footer p {
+    color: white;
+    font-family: "Raleway", serif;
+    font-size: 0.7em;
+}
+/* Fin de la partie pour les réseaux sociaux utiles */
