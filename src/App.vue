@@ -1,6 +1,9 @@
 <template>
 
-  <div id="app">
+    <Navigation></Navigation>
+
+    <Main></Main>
+
     <contenu
     name="mon_cv"
     backgroundColor="orange"
@@ -9,7 +12,9 @@
     :langageUsed="langageUsed[0]"
     :projectLink="projectLink[0]"
     :modaleDescription="modaleDescription[0]"
-    :creationDate="creationDate[0]">
+    :creationDate="creationDate[0]"
+    :siteLink="siteLink[0]">
+
     </contenu>
 
     <contenu
@@ -20,9 +25,9 @@
     :langageUsed="langageUsed[1]"
     :projectLink="projectLink[1]"
     :modaleDescription="modaleDescription[1]"
-    :creationDate="creationDate[1]">
+    :creationDate="creationDate[1]"
+    :siteLink="siteLink[1]">
     </contenu>
-  </div>
 
 </template>
 
@@ -30,11 +35,16 @@
 <script>
 
 import Contenu from './components/Contenu.vue';
+import Navigation from './components/Navigation.vue';
+import Main from './components/Main.vue';
 
 export default {
+
   name: 'App',
   components: {
-    'contenu': Contenu,
+    Contenu,
+    Navigation,
+    Main,
 },
   data(){
     return{
@@ -62,6 +72,10 @@ export default {
         "30/08/2023",
         "17/10/2023",
       ],
+      siteLink: [
+        "../../projects/Mon_CV-main/index.html",
+        "../../projects/Espace-commentaire-main/index.html",
+      ]
     }
   }
 }
@@ -71,6 +85,29 @@ export default {
 
 <style>
 
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Press+Start+2P&family=Tilt+Neon&display=swap');
 
+:root{
+    --police-neon: 'Tilt Neon', sans serif;
+    --police-Noto: 'Noto sans', sans serif;
+    --police-pixel: 'Press Start 2P', sans serif;
+    --color-main: #E1C4FF;
+    --color-shadow: #8C1EFF; 
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: #0D0126;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
 </style>

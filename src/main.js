@@ -1,10 +1,16 @@
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+import { createApp } from 'vue';
+import App from './App.vue';
+import { createRouter, createWebHistory } from 'vue-router';
+import NotFound from './components/NotFound.vue';
 
-import App from './App.vue'
 
-const app = createApp(App)
+const routes = [
+  { path: '/:pathMatch(.*)*', component: NotFound }, // Utilisez cette syntaxe pour la route 404
+];
 
-app.use(createPinia())
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+});
 
-app.mount('#app')
+createApp(App).use(router).mount('#app');

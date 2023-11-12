@@ -1,5 +1,5 @@
 <template>
-
+<div id="projets"></div>
     <div id="container" :class="cssClass">
         <div class="contenu-modale">
 
@@ -10,13 +10,15 @@
                 :backgroundColor='backgroundColor'
                 :projectLink="projectLink"
                 :modaleDescription="modaleDescription"
-                :creationDate="creationDate">
+                :creationDate="creationDate"
+                :siteLink="siteLink">
             </modale>
             <img :src="imageSrc" alt="" v-on:click='toggleModale'>
             <p>{{ titreModale }}</p>
             <p>{{ langageUsed }}</p>
             <div  class="project-link">
                 <a :href="projectLink" target="_blank" :class="btnClass">&lt;code&gt;</a>
+                <a :href="siteLink" target="_blank" :class="btnClass">site</a>
             </div>
             
         </div>
@@ -39,6 +41,7 @@
             'projectLink',
             'modaleDescription',
             'creationDate',
+            'siteLink',
             ],
         data(){
             return{
@@ -95,7 +98,8 @@
 a {
     text-decoration: none;
     color: white;
-    padding: 0px 5px 4px 5px;
+    padding: 0px 5px 4px 8px;
+    margin: 0 50px 0 0;
     border: solid white;
     border-radius:30px;
 }

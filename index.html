@@ -6,44 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="./src/assets/style.css">
+    <meta name="description" content="Porfolio de Christophe PEREZ. Développeur Web Junior passionné, curieux et en perpétuelle recherche d'amélioration.">
   </head>
   <body>
-    <header>
-      <div class="navigation">
-        <nav>
-          <img class="logo-coderez-nav" src="./Images/logo_CodeRez.png" alt="Logo CodeRez avec une balise à gauche" onmouseover="this.src='./Images/logo_CodeRez_hover.png';" onmouseout="this.src='./Images/logo_CodeRez.png';">
-          <ol class="menu">
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Compétences</a></li>
-            <li><a href="#">Projets</a></li>
-            <li><a href="#">Contact</a></li>
-          </ol>
-        </nav>
-      </div>
-    </header>
     <main>
-      <div class="accueil">
-        <h1>Développeur Web Junior Front-End</h1>
-        <p>
-          Christophe PEREZ,<br>
-          Développeur passionné par les nouvelles technologies et l’univers du web, je suis spécialisé dans le développement front-end. Polyvalent, je maîtrise plusieurs langages de programmation dont HTML, CSS et JavaScript et la création de sites web et d’applications. Je sais identifier et comprendre les besoins des utilisateurs pour de meilleurs résultats.
-        </p>
-        <div class="compétences">
-          <h2>Compétences</h2>
-            <div class="compétences-list">
-              <ol>
-                <li><img src="./Images/HTML.png" alt="">HTML</li>
-                <li><img src="./Images/CSS.png" alt="">CSS</li>
-                <li><img src="./Images/JAVASCRIPT.png" alt="">JAVASCRIPT</li>
-              </ol>
-            </div>
-        </div>
-      </div>
       
       <div id="app"></div>
 
       <div class="contact">
-        <h2>CONTACT</h2>
+        <h2 id="contact">CONTACT</h2>
         <form action="#" method="get" class="contact-form">
           <div class="lastname--firstname">
             <input type="text" id="lastname--firstname" placeholder="Nom et prénom" required >
@@ -62,6 +33,8 @@
           
         </div>
       </div>
+    
+      
     </main>
     <footer>
       <div class="footer">
