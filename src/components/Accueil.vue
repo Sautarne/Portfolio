@@ -13,6 +13,7 @@
             <li><img src="../../Images/HTML.png" alt="">HTML</li>
             <li><img src="../../Images/CSS.png" alt="">CSS</li>
             <li><img src="../../Images/JAVASCRIPT.png" alt="">JAVASCRIPT</li>
+            <li><img src="../../Images/VUE JS.png" alt="">VUE JS</li>
             </ol>
         </div>
     </div>
@@ -38,7 +39,7 @@ main{
 }
 .accueil{
     width: 100%;
-    height: 900px;
+    height: 1000px;
     margin-top: 150px;
     display: flex;
     flex-direction: column;
