@@ -32,6 +32,7 @@ export default {
         'backgroundColor',
         'modaleDescription',
         'creationDate',
+        'siteLink',
         ],
     computed: {
             /*Permet le changement de fond sur les différents contenus*/

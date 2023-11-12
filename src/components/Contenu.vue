@@ -15,7 +15,7 @@
             </modale>
             <img :src="imageSrc" alt="" v-on:click='toggleModale'>
             <p>{{ titreModale }}</p>
-            <p>{{ langageUsed }}</p>
+            <p v-bind="$attrs">{{ langageUsed }}</p>
             <div  class="project-link">
                 <a :href="projectLink" target="_blank" :class="btnClass">&lt;code&gt;</a>
                 <a :href="siteLink" target="_blank" :class="btnClass">site</a>

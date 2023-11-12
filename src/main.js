@@ -5,7 +5,7 @@ import NotFound from './components/NotFound.vue';
 
 
 const routes = [
-  { path: '/:pathMatch(.*)*', component: NotFound }, // Utilisez cette syntaxe pour la route 404
+  { path: '/:pathMatch(.*)*', component: NotFound },
 ];
 
 const router = createRouter({

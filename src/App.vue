@@ -4,7 +4,7 @@
 
     <Main></Main>
 
-    <contenu
+    <Contenu
     name="mon_cv"
     backgroundColor="orange"
     :imageSrc="imagePaths[0]"
@@ -15,9 +15,9 @@
     :creationDate="creationDate[0]"
     :siteLink="siteLink[0]">
 
-    </contenu>
+    </Contenu>
 
-    <contenu
+    <Contenu
     name="espace_commentaire"
     backgroundColor="rose"
     :imageSrc="imagePaths[1]"
@@ -27,16 +27,16 @@
     :modaleDescription="modaleDescription[1]"
     :creationDate="creationDate[1]"
     :siteLink="siteLink[1]">
-    </contenu>
+    </Contenu>
 
 </template>
 
 
 <script>
 
-import Contenu from './components/Contenu.vue';
 import Navigation from './components/Navigation.vue';
 import Main from './components/Main.vue';
+import Contenu from './components/Contenu.vue';
 
 export default {
 
